@@ -1,15 +1,14 @@
-"use client"
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
+import { newTodo } from "@/utils/actions";
 
 const NewTodoForm = () => {
-  const [ hello, setHello ] = useState('hola 1');
-  console.log(hello)
-  // console.log(window.localStorage)
   return (
-    <div>Aca el formulario
-      <button onClick={() => setHello('hola 2')}>Click me</button>
-    </div>
-  )
-}
+    <form action={newTodo}>
+      <input name="content" type="text" className="border border-black/25" />
+      <button type="submit">New Todo</button>
+    </form>
+  );
+};
 
 export default NewTodoForm;
