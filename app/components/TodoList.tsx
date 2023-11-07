@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 type Props = {
   todos: Array<{
-    id?: string
+    id: string
     createdAt?: Date | string
     content: string
     completed?: boolean
